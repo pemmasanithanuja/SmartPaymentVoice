@@ -30,17 +30,18 @@ Everything runs on the device. There is no server, no database, and the app does
 ## Tech stack
 Kotlin, Android Studio, NotificationListenerService, TextToSpeech, XML layouts, SharedPreferences. Min SDK 26 (Android 8.0).
 
-## Setup
-1. Install the APK on an Android phone
-2. Open the app, tap "Open notification access settings" and turn on Smart Payment Voice
-3. Use "Test voice" to check the voice and language
+## Install (Android 8.0 or newer)
+Google Play Protect blocks apps that use Notification access when they are installed from a browser, WhatsApp or a file manager ("App blocked to protect your device"). This is Google's general rule for that permission, not a problem with this app. Installing over USB avoids it.
+
+1. On the phone: Settings > About phone, tap Build number 7 times, then Settings > Developer options > turn on USB debugging
+2. Connect the phone to a computer that has ADB (Android platform-tools) and allow the USB debugging prompt on the phone
+3. Download `SmartPaymentVoice-v1.0.apk` from the Releases page and run: `adb install -r SmartPaymentVoice-v1.0.apk`
+4. Open the app, tap "Open notification access settings" and turn on Smart Payment Voice
+5. Use "Test voice" to check the voice and language
+
+On Android 13 and above, if the toggle is greyed out, open the app's App info page, allow restricted settings from the top-right menu, then try again.
 
 On some phones (vivo, Oppo, Xiaomi) also allow background activity and autostart for the app, otherwise announcements may stop when the screen is locked.
-
-## Install over USB
-1. On the phone, enable Developer options and USB debugging
-2. Connect it to a computer that has ADB installed
-3. Run: `adb install -r app-debug.apk`
 
 ## Limitations
 - Android only. iOS does not let an app read other apps' notifications
