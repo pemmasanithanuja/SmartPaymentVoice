@@ -39,6 +39,7 @@ Google Play Protect blocks apps that use Notification access when they are insta
 4. Open the app, tap "Open notification access settings" and turn on Smart Payment Voice
 5. Use "Test voice" to check the voice and language
 
+Windows shortcut: download `install.bat` from this repository, keep it in the same folder as `SmartPaymentVoice-v1.0.apk` and double-click it. It finds ADB and installs the app.
 On Android 13 and above, if the toggle is greyed out, open the app's App info page, allow restricted settings from the top-right menu, then try again.
 
 On some phones (vivo, Oppo, Xiaomi) also allow background activity and autostart for the app, otherwise announcements may stop when the screen is locked.
